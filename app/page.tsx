@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div>
       Hello Board!
-      <Button size="sm">Click me</Button>
+      <Button size="sm" variant='ghost' >Click me</Button>
     </div>
   );
 }
