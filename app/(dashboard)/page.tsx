@@ -2,7 +2,7 @@ import React from 'react'
 
 const DashbardRoutpage = () => {
   return (
-    <div>
+    <div className="">
       <h1>Dashboard Rout page</h1>
     </div>
   )

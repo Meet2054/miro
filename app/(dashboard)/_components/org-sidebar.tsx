@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Poppins } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { OrganizationSwitcher } from "@clerk/nextjs";
-import { LayoutDashboard, Star } from "lucide-react";
+import { LayoutDashboard, Star,LayoutList } from "lucide-react";
 import { Button} from "@/components/ui/button";
 import { useSearchParams } from "next/navigation";
 
@@ -23,7 +23,7 @@ const OrganizationSidebar = () => {
 
   return (
     <div>
-      <div className="hidden lg:flex flex-col space-y-6 w-[206px] h-full pl-5 pt-5 ">
+      <div className="hidden lg:flex flex-col space-y-6 w-[230px] h-full pl-5 pt-5 bg-red-300">
          <Link href="/">
             <div className="flex items-center gap-x-2">
               <Image
@@ -62,7 +62,7 @@ const OrganizationSidebar = () => {
           }
         }}
         />
-        <div className="space-y-1 w-full">
+        <div className="space-y-1 w-full pr-2">
           <Button 
           variant={favorites? "ghost": "secondary"}
           asChild
@@ -70,7 +70,7 @@ const OrganizationSidebar = () => {
           className="font-normal justify-start px-2 w-full   "
            >
             <Link href="/">
-              <LayoutDashboard className="h-4 w-4 mr-2" />
+              <LayoutList className="h-4 w-4 mr-3" />
               Team boards
             </Link>
           </Button>

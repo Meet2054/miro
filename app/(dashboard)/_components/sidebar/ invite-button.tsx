@@ -17,7 +17,7 @@ const  InviteButton = () => {
                Invite member
            </Button>
         </DialogTrigger>
-        <DialogContent>
+        <DialogContent >
             <OrganizationProfile/>
         </DialogContent>   
     </Dialog>
