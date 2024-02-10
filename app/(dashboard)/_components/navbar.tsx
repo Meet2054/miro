@@ -1,12 +1,16 @@
 "use client";
 
 import { UserButton } from "@clerk/nextjs";
-import { Search } from "lucide-react";
-import SearchInput from "./search-input";
-import { OrganizationSwitcher } from "@clerk/nextjs";
+// import { Search } from "lucide-react";
+import {SearchInput} from "./search-input";
+import { OrganizationSwitcher, useOrganization } from "@clerk/nextjs";
 import InviteButton from "./sidebar/ invite-button";
 
 const Navbar = () => {
+
+  const { organization } = useOrganization();
+
+
   return (
     <div >
       <div className="flex items-center gap-x-4 p-5 bg-red-300">
@@ -40,7 +44,10 @@ const Navbar = () => {
         }}
         />
         </div> 
-        <InviteButton/>
+        { organization &&
+          (
+            <InviteButton/>
+          )}
         <UserButton/>
       </div>
     </div>
