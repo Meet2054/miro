@@ -1,14 +1,17 @@
-// DashbardRoutpage.tsx
-
+// // DashbardRoutpage.tsx
 "use client";
+
 import { useOrganization } from '@clerk/nextjs';
 import EmptyOrg from './_components/empty-org';
+import BoardList from './_components/BoardList';
+
+interface SearchParams {
+  favorites?: string;
+  search?: string;
+}
 
 interface DashbardPageProps {
-  searchParams: {
-    favorites?: string;
-    search?: string;
-  };
+  searchParams: SearchParams;
 }
 
 const DashbardRoutpage = ({ searchParams }: DashbardPageProps) => {
@@ -16,12 +19,11 @@ const DashbardRoutpage = ({ searchParams }: DashbardPageProps) => {
 
   return (
     <div className="flex-1 h-[calc(100%-80px)] p-6">
-      {JSON.stringify(searchParams)}
       {!organization ? (
         <EmptyOrg />
       ) : (
         <div>
-          <h1>Board List</h1>
+          <BoardList orgId={organization.id} query={searchParams} />
         </div>
       )}
     </div>
