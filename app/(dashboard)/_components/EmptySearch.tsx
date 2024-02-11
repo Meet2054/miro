@@ -6,8 +6,8 @@ const EmptySearch = () => {
     <div className="h-full flex flex-col items-center justify-center">
       <Image
         src={"/empty-search.svg"}
-        height={240}    
-        width={240}
+        height={140}    
+        width={140}
         alt="empty search"
         />
         <h2 className="mt-6 text-semibold text-2xl">No Results Found!</h2>

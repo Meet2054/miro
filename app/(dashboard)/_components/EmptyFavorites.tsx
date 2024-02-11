@@ -7,8 +7,8 @@ const EmptyFavorites = () => {
             <Image
               src={"/empty-favorites.svg"}
               alt="empty favorites"
-              height={240}    
-              width={240}
+              height={140}    
+              width={140}
               className="mt-[100px]"
               />
               <h2 className="mt-6 text-semibold text-2xl">No favorites found</h2>

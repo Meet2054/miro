@@ -8,8 +8,8 @@ const EmptyBoards = () => {
             <Image
               src={"/note.svg"}
               alt="No Boards Found!"
-              height={240}    
-              width={240}
+              height={140}    
+              width={140}
               className="mt-[100px]"
               />
               <h2 className="mt-6 text-semibold text-2xl">Create your First Board!</h2>
