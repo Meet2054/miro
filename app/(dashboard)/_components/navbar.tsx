@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <div >
-      <div className="flex items-center gap-x-4 p-5 bg-red-300">
+      <div className="flex items-center gap-x-4 p-5">
         <div className="hidden lg:flex lg:flex-1 ">
           <SearchInput/>
         {/* Add Search  */}
